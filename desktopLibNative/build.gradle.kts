@@ -86,7 +86,7 @@ fun detectOs(): Os {
             osArch.contains("arm", ignoreCase = true)
     return when {
         osName.startsWith("Linux") -> {
-            if (isArm) Os.LINUX_ARM64 else Os.LINUX_X64
+            if (isArm) Os.LINUX_ARM64 else Os.LINUX_ARM64
         }
 
         osName.startsWith("Mac") ||

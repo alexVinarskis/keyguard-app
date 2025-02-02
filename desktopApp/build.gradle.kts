@@ -203,6 +203,7 @@ tasks.register("bundleFlatpak") {
             workingDir(flatpakDir)
             val buildCommand = listOf(
                 "flatpak-builder",
+                "--arch=aarch64",
                 "--force-clean",
                 "--state-dir=build/flatpak-builder",
                 "--repo=build/flatpak-repo",
@@ -215,6 +216,7 @@ tasks.register("bundleFlatpak") {
             workingDir(flatpakDir)
             val bundleCommand = listOf(
                 "flatpak",
+                "--arch=aarch64",
                 "build-bundle",
                 "build/flatpak-repo",
                 "Keyguard.flatpak",
@@ -232,6 +234,7 @@ tasks.register("installFlatpak") {
             workingDir(flatpakDir)
             val installCommand = listOf(
                 "flatpak-builder",
+                "--arch=aarch64",
                 "--install",
                 "--user",
                 "--force-clean",
